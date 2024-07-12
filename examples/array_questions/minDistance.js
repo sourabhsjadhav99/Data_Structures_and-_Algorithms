@@ -1,0 +1,15 @@
+let shortestToChar = function(s, c) {
+    let prev = s.indexOf(c);
+    let next = prev;
+    const distance = [];
+    for (let i = 0; i < s.length; i ++) {
+        if (s[i] === c) {
+            prev = i;
+            next = s.indexOf(c, prev + 1);
+        }
+        distance.push(Math.min(Math.abs(prev - i), Math.abs(next - i)));
+    }
+    return distance;
+};
+let s = "loveleetcode", c = "e"
+console.log(shortestToChar(s,c)) 

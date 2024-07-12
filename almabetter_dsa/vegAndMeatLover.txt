@@ -1,0 +1,6 @@
+SELECT c.customer_id, p.pizza_name, COUNT(p.pizza_name) AS no_of_orders
+FROM customer_orders AS c
+JOIN pizza_names AS p
+        ON c.pizza_id= p.pizza_id
+GROUP BY c.customer_id, p.pizza_name
+ORDER BY c.customer_id;

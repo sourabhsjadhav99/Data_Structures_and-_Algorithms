@@ -1,0 +1,2 @@
+SELECT COUNT(DISTINCT node_id) as node_id_count
+FROM customer_nodes;

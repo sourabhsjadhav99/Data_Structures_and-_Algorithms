@@ -1,0 +1,6 @@
+SELECT c.customer_id, printf('%.6f' , avg(r.distance))  AS avg_distance
+FROM customer_orders AS c
+JOIN runner_orders AS r
+        ON c.order_id = r.order_id
+WHERE duration != 'null'
+GROUP BY c.customer_id;

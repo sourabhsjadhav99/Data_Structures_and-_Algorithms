@@ -1,0 +1,11 @@
+SELECT 
+  s.customer_id, 
+  COUNT(DISTINCT s.product_id) AS unique_menu_item, 
+  SUM(mm.price) AS total_sales
+FROM sales AS s
+JOIN members AS m
+        ON s.customer_id = m.customer_id
+JOIN menu AS mm
+        ON s.product_id = mm.product_id
+WHERE s.order_date < m.join_date
+GROUP BY s.customer_id;
