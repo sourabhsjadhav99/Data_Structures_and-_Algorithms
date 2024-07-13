@@ -55,7 +55,7 @@ class LinkedList {
         } else {
             const node = new Node(value);
             let prev = this.head;
-            for (let i = 0; i < index - 1; i++) { // index-1 because initially prev = this.head
+            for (let i = 0; i < index - 1; i++) { // index-1 because initially prev = this.head AND INDEX 
                 prev = prev.next;
             }
             node.next = prev.next;
@@ -163,10 +163,10 @@ class LinkedList {
             return "False"
         }
         let values=[]
-        let current=this.head
-        while(current){
-            values.push(current.value)
-            current=current.next
+        let curr=this.head
+        while(curr){
+            values.push(curr.value)
+            curr=curr.next
         }
 
         let start =0

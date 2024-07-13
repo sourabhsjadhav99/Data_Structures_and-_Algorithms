@@ -5,23 +5,25 @@
 // data.splice(2, 0, 70)
 // console.log(data)
 
-// let newEl = 70;
-// let position = 2;
-// for (let i = data.length - 1; i >= 0; i--) {
-//     if (i >= position) {
-//         data[i + 1] = data[i];
-//         if (i == position) {
-//             data[i] = newEl;
-//         }
+// let arr = [9, 23, 8, 73, 56, 24];
+// numToInsert = 25
+// let position = 3
+
+// function insertInArray(arr, position, numToInsert) {;
+//     for (let i =arr.length; i > position; i--) {
+//             arr[i] = arr[i-1]
 //     }
+//     arr[position] = numToInsert
+//     return arr
 // }
-// console.log(data)
+// console.log(insertInArray(arr, position, numToInsert))
+
 
 
 //-----------------------
 // Delete 
 let data = [60, 30, 10, 67, 40];
-data.splice(3,1)
+data.splice(3, 1)
 console.log(data)
 
 // let position = 3;
@@ -32,7 +34,7 @@ console.log(data)
 // data.length = data.length - 1;
 // console.log(data)
 // ----------------------------------------------------------------------------------------------------------------------
-// Merge 
+// Merge
 // let data =[3,7,12,34,56,90];
 // let data2=[20,30,40,50]
 // console.log([...data,...data2])
@@ -48,14 +50,14 @@ console.log(data)
 // }
 // console.data(data3);
 // ----------------------------------------------------------------------------------------------------------------------
-// Reverse 
+// Reverse
 // let arr=[2,45,62,79,10,23,1,5]
 // console.log(arr.reverse())
 //-------------------------
 // let start =0
 // let end = arr.length-1
 
-// while(start<=end){
+// while(start<end){
 //     let temp=arr[start]
 //     arr[start]=arr[end]
 //     arr[end]=temp

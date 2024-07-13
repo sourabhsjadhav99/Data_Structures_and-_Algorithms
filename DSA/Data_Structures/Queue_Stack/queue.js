@@ -1,84 +1,39 @@
-class Queue {
-    constructor() {
-      this.items = [];
-    }
-  
-    enqueue(element) {
-      this.items.push(element);
-    }
-  
-    dequeue() {
-      return this.items.shift();
-    }
-  
-    peek() {
-      if (!this.isEmpty()) {
-        return this.items[0];
-      }
-      return null;
-    }
-  
-    isEmpty() {
-      return this.items.length === 0;
-    }
-  
-    size() {
-      return this.items.length;
-    }
-  
-    print() {
-      console.log(this.items.toString());
-    }
-  }
-  
-  const queue = new Queue();
-  console.log(queue.isEmpty());
-  queue.enqueue(10);
-  queue.enqueue(20);
-  queue.enqueue(30);
-  console.log(queue.size());
-  queue.print();
-  console.log(queue.dequeue());
-  console.log(queue.peek());
-  queue.print();
-
-//   queue object 
 // class Queue {
 //     constructor() {
-//       this.items = {};
-//       this.front = 0;
-//       this.rear = 0;
+//       this.items = [];
 //     }
-  
+
 //     enqueue(element) {
-//       this.items[this.rear] = element;
-//       this.rear++;
+//       this.items.push(element);
 //     }
-  
+
 //     dequeue() {
-//       const item = this.items[this.front];
-//       delete this.items[this.front];
-//       this.front++;
-//       return item;
+//       if (this.isEmpty()) {
+//         return null;
+//       }
+//       return this.items.shift();
 //     }
-  
+
 //     peek() {
-//       return this.items[this.front];
+//       if (this.isEmpty()) {
+//         null
+//       }
+//       return this.items[0];
 //     }
-  
-//     size() {
-//       return this.rear - this.front;
-//     }
-  
+
 //     isEmpty() {
-//       return this.rear - this.front === 0;
+//       return this.items.length === 0;
 //     }
-  
+
+//     size() {
+//       return this.items.length;
+//     }
+
 //     print() {
-//       console.log(this.items);
+//       console.log(this.items.join(" "));
 //     }
 //   }
-  
+
 //   const queue = new Queue();
 //   console.log(queue.isEmpty());
 //   queue.enqueue(10);
@@ -88,8 +43,63 @@ class Queue {
 //   queue.print();
 //   console.log(queue.dequeue());
 //   console.log(queue.peek());
-//   console.log(queue.isEmpty());
 //   queue.print();
+
+//-----------------------------------------------------------------------------------
+//   queue object 
+class Queue {
+  constructor() {
+    this.items = {};
+    this.front = 0;
+    this.rear = 0;
+  }
+
+  enqueue(element) {
+    this.items[this.rear] = element;
+    this.rear++;
+  }
+
+  dequeue() {
+    if (this.isEmpty()) {
+      return null
+    }
+    const item = this.items[this.front];
+    delete this.items[this.front];
+    this.front++;
+    return item;
+  }
+
+  peek() {
+    if (this.isEmpty()) {
+      return null
+    }
+    return this.items[this.front];
+  }
+
+  size() {
+    return this.rear - this.front;
+  }
+
+  isEmpty() {
+    return this.rear - this.front === 0;
+  }
+
+  print() {
+    console.log(this.items);
+  }
+}
+
+const queue = new Queue();
+console.log(queue.isEmpty());
+queue.enqueue(10);
+queue.enqueue(20);
+queue.enqueue(30);
+console.log(queue.size());
+queue.print();
+console.log(queue.dequeue());
+console.log(queue.peek());
+console.log(queue.isEmpty());
+queue.print();
 //----------------------------------------------------------------------------------------------------
 //  let queue = [];
 // let currentSize = queue.length;
@@ -151,95 +161,3 @@ class Queue {
 
 // // display();
 //----------------
-class Queue {
-  constructor() {
-    this.items = [];
-  }
-
-  enqueue(element) {
-    this.items.push(element);
-  }
-
-  dequeue() {
-    return this.items.shift();
-  }
-
-  peek() {
-    if (!this.isEmpty()) {
-      return this.items[0];
-    }
-    return null;
-  }
-
-  isEmpty() {
-    return this.items.length === 0;
-  }
-
-  size() {
-    return this.items.length;
-  }
-
-  print() {
-    console.log(this.items.toString());
-  }
-}
-
-const queue = new Queue();
-console.log(queue.isEmpty());
-queue.enqueue(10);
-queue.enqueue(20);
-queue.enqueue(30);
-console.log(queue.size());
-queue.print();
-console.log(queue.dequeue());
-console.log(queue.peek());
-queue.print();
-
-//   queue object 
-// class Queue {
-//     constructor() {
-//       this.items = {};
-//       this.front = 0;
-//       this.rear = 0;
-//     }
-
-//     enqueue(element) {
-//       this.items[this.rear] = element;
-//       this.rear++;
-//     }
-
-//     dequeue() {
-//       const item = this.items[this.front];
-//       delete this.items[this.front];
-//       this.front++;
-//       return item;
-//     }
-
-//     peek() {
-//       return this.items[this.front];
-//     }
-
-//     size() {
-//       return this.rear - this.front;
-//     }
-
-//     isEmpty() {
-//       return this.rear - this.front === 0;
-//     }
-
-//     print() {
-//       console.log(this.items);
-//     }
-//   }
-
-//   const queue = new Queue();
-//   console.log(queue.isEmpty());
-//   queue.enqueue(10);
-//   queue.enqueue(20);
-//   queue.enqueue(30);
-//   console.log(queue.size());
-//   queue.print();
-//   console.log(queue.dequeue());
-//   console.log(queue.peek());
-//   console.log(queue.isEmpty());
-//   queue.print();
