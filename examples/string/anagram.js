@@ -11,48 +11,6 @@
 // }
 
 
-function anagram(s, t) {
-    s = s.split("")
-    t = t.split("")
-    if (s.length !== t.length) {
-        return false
-    } else {
-        let hashmap = new Map()
-        for (let i = 0; i < s.length; i++) {
-            if (!hashmap.has(s[i])) {
-                hashmap.set(s[i], 1)
-            } else {
-                hashmap.set(s[i], hashmap.get(s[i]) + 1)
-            }
-        }
-        for (let i = 0; i < t.length; i++) {
-            let char = t[i]
-            if (hashmap.has(char) && hashmap.get(char) >= 1) {
-                hashmap.set(char, hashmap.get(char) - 1)
-            } else {
-                return false
-            }
-        }
-        return true
-    }
-}
-
-let s = "helloo";
-let t = "helloo"
-console.log(anagram(s, t));
-
-// let checkAnagram =(str1, str2)=>{
-//     if(str1.length!==str2.length){
-//         return false
-//     }
-//     let arr1=str1.split("").sort().join("")
-//     let arr2=str2.split("").sort().join("")
-//     return arr1===arr2
-
-// }
-// console.log(checkAnagram("ramam", "mara"))
-
-
 let checkAnagram = (str1, str2) => {
     if (str1.length !== str2.length) {
         return false
@@ -72,4 +30,4 @@ let checkAnagram = (str1, str2) => {
 
     return true
 }
-console.log(checkAnagram("ramam", "maram"))
+console.log(checkAnagram("ramam", "maramh"))

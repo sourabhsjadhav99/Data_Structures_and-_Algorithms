@@ -1,6 +1,5 @@
 // const isValid = (s) => {
 //     if (s.length % 2 !== 0) return false;
-
 //     const stack = [];
 //     const map = new Map([
 //         ['(', ')'],

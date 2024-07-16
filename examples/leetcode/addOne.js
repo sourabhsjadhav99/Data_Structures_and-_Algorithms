@@ -1,6 +1,6 @@
 var plusOne = function(digits) {
-    let str = Number(digits.join(""))
-    let add= str +1
+    let num = Number(digits.join(""))
+    let add= num +1
     return String(add).split("").map(Number)
 
     
