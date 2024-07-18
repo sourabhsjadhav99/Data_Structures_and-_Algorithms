@@ -5,7 +5,7 @@
 //     while (n%4===0) {
 //             n = n / 4
 //     }
-//    return n===1 ? true: false
+//    return n===1 
 
 // };
 // console.log(isPowerOfFour(6))

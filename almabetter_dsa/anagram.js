@@ -1,4 +1,7 @@
 function areAnagrams(str1, str2) {
+    if(str1 !==str2){
+        return false;
+    }
     let map = new Map()
     for (let i = 0; i < str1.length; i++) {
         map.set(str1[i], (map.get(str1[i]) || 0) + 1)
