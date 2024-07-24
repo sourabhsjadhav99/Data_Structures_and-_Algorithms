@@ -8,7 +8,7 @@
         
 //         }
 //     }
-
+// return []
 // }
 
 function twoSum(nums, target) {
@@ -20,7 +20,6 @@ function twoSum(nums, target) {
         }
         numMap.set(nums[i], i);
     }
-
     return [];
 }
 const nums = [2, 7, 4, 11, 15];
