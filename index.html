@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Example</title>
+    <style>
+        .draggable {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+            cursor: move;
+        }
+
+        .dropzone {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            background-color: #ecf0f1;
+            border: 2px dashed #7f8c8d;
+        }
+
+        .dropzone.hover {
+            background-color: #bdc3c7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="draggable" draggable="true" id="draggable1">Drag me</div>
+    <div class="dropzone" id="dropzone1">Drop here</div>
+
+    <script src="script.js"></script>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const draggable = document.getElementById('draggable1');
+        const dropzone = document.getElementById('dropzone1');
+
+        // Event listener for the drag start event
+        draggable.addEventListener('dragstart', (e) => {
+            e.dataTransfer.setData('text/plain', draggable.id);
+            draggable.classList.add('dragging');
+        });
+
+        // Event listener for the drag end event
+        draggable.addEventListener('dragend', () => {
+            draggable.classList.remove('dragging');
+        });
+
+        // Event listener for the drag over event
+        dropzone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropzone.classList.add('hover');
+        });
+
+        // Event listener for the drag leave event
+        dropzone.addEventListener('dragleave', () => {
+            dropzone.classList.remove('hover');
+        });
+
+        // Event listener for the drop event
+        dropzone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const id = e.dataTransfer.getData('text/plain');
+            const draggableElement = document.getElementById(id);
+            dropzone.appendChild(draggableElement);
+            dropzone.classList.remove('hover');
+        });
+    });
+
+</script>
+
+</html>

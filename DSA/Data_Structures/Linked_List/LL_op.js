@@ -174,12 +174,12 @@ class LinkedList {
 
         while(start<end){
             if(values[start] !==values[end]){
-                return "False"
+                return false
             }
             start++
             end--
         }
-        return "True"
+        return true
     }
 }
 

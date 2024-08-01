@@ -31,4 +31,4 @@ function minSubarray(nums, p) {
 // Example usage:
 console.log(minSubarray([3, 1, 4, 2], 6)); // Output: 1
 console.log(minSubarray([6, 3, 5, 2], 9)); // Output: 2
-console.log(minSubarray([1, 2, 3], 3)); // Output: 3
+console.log(minSubarray([1, 2, 3], 3)); // Output: 0

@@ -8,10 +8,10 @@ class Node {
 class LinkedListStack {
     constructor() {
         this.head = null;
-      this.tail = null;
-      this.size = 0;
+        this.tail = null;
+        this.size = 0;
     }
-  
+
 
     // 1
     isEmpty() {
@@ -39,13 +39,13 @@ class LinkedListStack {
 
     removeFromFront() {
         if (this.isEmpty()) {
-          return null;
+            return null;
         }
         const value = this.head.value;
         this.head = this.head.next;
         this.size--;
         return value;
-      }
+    }
 
     pop() {
         return this.removeFromFront();

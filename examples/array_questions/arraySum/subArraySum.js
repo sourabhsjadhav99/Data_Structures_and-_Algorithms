@@ -1,17 +1,19 @@
 
 function subarraySum(arr, target) {
     const result = [];
-    
+
     for (let start = 0; start < arr.length; start++) {
         let sum = 0;
         for (let end = start; end < arr.length; end++) {
             sum += arr[end];
             if (sum === target) {
                 result.push(arr.slice(start, end + 1));
+            } else if (sum > target) {
+                continue
             }
         }
     }
-    
+
     return result.length
 }
 // Example usage:
