@@ -1,0 +1,109 @@
+Regular Expressions (Regex) are powerful tools used for searching, matching, and manipulating strings. Regex patterns are used in various programming languages, including JavaScript, Python, PHP, and many others. They enable complex search patterns and data extraction, often used for validating inputs (such as emails or phone numbers), parsing text, and much more.
+
+Basic Structure of a Regex
+A regex pattern is made up of literals, metacharacters, and quantifiers.
+
+1. Literals
+These are plain characters that match exactly as they are.
+
+Example: The pattern cat will match the string "cat" in any text.
+
+2. Metacharacters
+Special characters that have specific meanings in regex.
+
+.: Matches any single character (except for newline).
+
+Pattern: c.t
+Matches: "cat", "cot", "cut"
+^: Anchors the match to the start of a string.
+
+Pattern: ^cat
+Matches: "cat" only if it's at the beginning of the string.
+$: Anchors the match to the end of a string.
+
+Pattern: cat$
+Matches: "cat" only if it's at the end of the string.
+\d: Matches any digit (equivalent to [0-9]).
+
+Pattern: \d
+Matches: "3", "5", etc.
+\w: Matches any alphanumeric character (equivalent to [A-Za-z0-9_]).
+
+Pattern: \w
+Matches: "A", "7", "_", etc.
+\s: Matches any whitespace character (spaces, tabs, newlines).
+
+\b: Word boundary (matches the position where a word starts or ends).
+
+Pattern: \bcat\b
+Matches: "cat" as a whole word, not as part of "category".
+
+3. Quantifiers
+Quantifiers specify how many instances of a character or group should be matched.
+
+*: Matches 0 or more occurrences.
+
+Pattern: ca*t
+Matches: "ct", "cat", "caaaat"
++: Matches 1 or more occurrences.
+
+Pattern: ca+t
+Matches: "cat", "caaat", but not "ct".
+?: Matches 0 or 1 occurrence.
+
+Pattern: ca?t
+Matches: "ct", "cat", but not "caaat".
+{n}: Matches exactly n occurrences.
+
+Pattern: a{3}
+Matches: "aaa", but not "aa" or "aaaa".
+{n,}: Matches n or more occurrences.
+
+Pattern: a{3,}
+Matches: "aaa", "aaaa", and so on.
+{n,m}: Matches between n and m occurrences.
+
+Pattern: a{2,4}
+Matches: "aa", "aaa", "aaaa", but not "a" or "aaaaa".
+
+4. Character Classes
+Character classes allow you to specify a set of characters to match.
+
+[abc]: Matches either "a", "b", or "c".
+[a-z]: Matches any lowercase letter.
+[A-Z]: Matches any uppercase letter.
+[0-9]: Matches any digit.
+You can also negate a character class:
+
+[^abc]: Matches any character except "a", "b", or "c".
+
+5. Groups and Alternation
+( ... ): Groups multiple patterns together.
+
+Example: (cat|dog) matches either "cat" or "dog".
+|: Acts as a logical OR between patterns.
+
+Example: cat|dog matches either "cat" or "dog".
+
+6. Escaping Special Characters
+If you want to use a special character like . or * as a literal, you must escape it using a backslash \.
+
+Example: To match a literal dot, use \. instead of ..
+
+7. Lookahead and Lookbehind
+Lookahead ((?=...)): Ensures that a certain pattern follows the current position.
+
+Pattern: \d(?=px)
+Matches: Any digit followed by "px" without including "px" in the match.
+Negative Lookahead ((?!...)): Ensures that a certain pattern does not follow the current position.
+
+Pattern: \d(?!px)
+Matches: Any digit that is not followed by "px".
+Lookbehind ((?<=...)): Ensures that a certain pattern precedes the current position.
+
+Pattern: (?<=\$)\d+
+Matches: Digits that follow a dollar sign.
+Negative Lookbehind ((?<!...)): Ensures that a certain pattern does not precede the current position.
+
+Pattern: (?<!\$)\d+
+Matches: Digits not preceded by a dollar sign.
