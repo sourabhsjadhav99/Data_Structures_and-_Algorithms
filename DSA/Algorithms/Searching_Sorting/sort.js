@@ -1,4 +1,4 @@
-// // // Bubble Sort - T-O(n**2) S-O(1) Bubble Sort works by repeatedly swapping adjacent elements if they are in the wrong order, in first iteration largest element is pooped and this will continue until the entire array is sorted
+//  Bubble Sort - T-O(n**2) S-O(1) Bubble Sort works by repeatedly swapping adjacent elements if they are in the wrong order, in first iteration largest element is pooped and this will continue until the entire array is sorted
 // function bubbleSort(arr) {
 //   for (let i = 0; i < arr.length; i++) {
 //     for (let j = 0; j < arr.length - 1 - i; j++) { // to skip unnecessary comparisons with elements that are already in their correct positions
@@ -57,7 +57,7 @@
   //     }
   //   }
   
-  //   // If there are remaining elements in either leftArr or rightArr, add them to the result
+  //  If there are remaining elements in either leftArr or rightArr, add them to the result
   // return sortedArr.concat(leftArr.slice(leftIndex)).concat(rightArr.slice(rightIndex));
   // }
   
@@ -121,16 +121,16 @@
 
 //   function selectionSort(arr) {
 //   for (let i = 0; i < arr.length; i++) {
-//     // Assume the current index is the minimum
+//      Assume the current index is the minimum
 //     let minIndex = i;
-//     // Find the index of the minimum element in the unsorted part
+//     Find the index of the minimum element in the unsorted part
 //     for (let j = i + 1; j < arr.length; j++) {
 //       if (arr[j] < arr[minIndex]) {
 //         minIndex = j;
 //       }
 //     }
 
-//     // Swap the found minimum element with the first element
+//      Swap the found minimum element with the first element
 //     if (minIndex !== i) {
 //       [arr[i], arr[minIndex]]=[ arr[minIndex],arr[i]];
 //     }

@@ -3,12 +3,12 @@
 //       this.items = [];
 //   }
 
-//   // Add an element to the top of the stack
+// Add an element to the top of the stack
 //   push(element) {
 //       this.items.push(element);
 //   }
 
-//   // Remove and return the top element of the stack
+// Remove and return the top element of the stack
 //   pop() {
 //       if (this.isEmpty()) {
 //           return "Stack is empty";
@@ -16,7 +16,7 @@
 //       return this.items.pop();
 //   }
 
-//   // Return the top element of the stack without removing it
+// Return the top element of the stack without removing it
 //   peek() {
 //       if (this.isEmpty()) {
 //           return "Stack is empty";
@@ -24,22 +24,22 @@
 //       return this.items[this.items.length - 1];
 //   }
 
-//   // Return true if the stack is empty
+// Return true if the stack is empty
 //   isEmpty() {
 //       return this.items.length === 0;
 //   }
 
-//   // Return the number of elements in the stack
+// Return the number of elements in the stack
 //   size() {
 //       return this.items.length;
 //   }
 
-//   // Empty the stack
+// Empty the stack
 //   clear() {
 //       this.items = [];
 //   }
 
-//   // Print the elements of the stack
+// Print the elements of the stack
 //   printStack() {
 //       console.log(this.items.join(' '));
 //   }
