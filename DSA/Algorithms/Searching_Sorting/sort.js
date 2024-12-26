@@ -224,4 +224,33 @@ function heapify(arr, n, i) {
 }
 // Example usage
 const array = [12, 11, 13, 5, 6, 7];
-console.log("Sorted array:", heapSort(array));
+console.log("Sorted array:", heapSort(const input = "My name is Ravi and I work for Impelox";
+
+// Function to count letter occurrences
+function countLetters(str) {
+  const letterCounts = {};
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+  for (const char of str.toLowerCase()) {
+    // Check if the character is in the alphabet string
+    if (alphabet.includes(char)) {
+      letterCounts[char] = (letterCounts[char] || 0) + 1;
+    }
+  }
+
+  // Sort the object keys in ascending order
+  return Object.keys(letterCounts)
+    .sort()
+    .reduce((sortedCounts, key) => {
+      sortedCounts[key] = letterCounts[key];
+      return sortedCounts;
+    }, {});
+}
+
+// Count and log the result
+const result = countLetters(input);
+console.log(result)
+
+
+
+
